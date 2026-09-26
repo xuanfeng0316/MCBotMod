@@ -1,0 +1,19 @@
+{
+	"required": true,
+	"package": "com.xuanfeng.mcbotmod.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"MoveMixin",
+		"RotationMixin",
+		"ChatMixin",
+		"ChatAccessor",
+		"KeyboardHandlerInvoker",
+		"MinecraftSetScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

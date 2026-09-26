@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "mcbotmod",
+	"version": "0.0.1",
+	"name": "MCBotMod",
+	"description": "Exposes Minecraft client's native methods as a TCP + JSON interface for external programs.",
+	"authors": [
+		"xuanfeng0316"
+	],
+	"contact": {
+		"homepage": "https://github.com/xuanfeng0316/MCBotMod",
+		"sources": "https://github.com/xuanfeng0316/MCBotMod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mcbotmod/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.xuanfeng.mcbotmod.MCBotMod",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.xuanfeng.mcbotmod.client.MCBotModClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"mcbotmod.mixins.json",
+		{
+			"config": "mcbotmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
